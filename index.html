@@ -11,11 +11,69 @@
 
     <style>
       body {
-        font-family: Verdana, sans-serif;
+        font-family: Georgia, serif;
+        font-size: small;
+        line-height: 1.75em;
+      }
+
+      h1,
+      h2,
+      #info {
+        text-align: center;
       }
 
       h1 {
-        font-family: "Marko One", Georgia, serif;
+        font: bold 1.5em "Marko One", Georgia, serif;
+        color: olive;
+        text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
+      }
+
+      h2 {
+        font-size: 1em;
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+        color: olive;
+      }
+
+      h2 + p {
+        text-align: center;
+        font-style: italic;
+      }
+
+      dt {
+        font-weight: bold;
+        color: sienna;
+      }
+
+      strong {
+        font-style: italic;
+      }
+
+      dt strong {
+        color: tomato;
+      }
+
+      #info p {
+        font-style: italic;
+        color: gray;
+      }
+
+      .price {
+        font-family: Georgia, serif;
+        font-style: italic;
+        color: gray;
+      }
+
+      .label {
+        font-weight: bold;
+        font-variant: small-caps;
+        font-style: normal;
+      }
+
+      p.warning,
+      sup {
+        color: red;
+        font-size: small;
       }
     </style>
   </head>
