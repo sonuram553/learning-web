@@ -25,8 +25,15 @@
         margin-top: 0;
         padding: 3em 1em 2em 1em;
         text-align: center;
-        background: rgba(255, 255, 255, 0.5) url("./images/purpledot.png")
-          repeat-x center top;
+
+        /* Fallback for the browsers that don't support multiple background images */
+        background: url("./images/purpledot.png") repeat-x center top;
+
+        background: url("./images/purpledot.png") repeat-y left center,
+          url("./images/purpledot.png") repeat-y right center,
+          url("./images/gooseshadow.png") no-repeat right 50px bottom;
+
+        background-color: rgba(255, 255, 255, 0.5);
       }
 
       a {
