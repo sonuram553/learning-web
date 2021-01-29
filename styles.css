@@ -160,6 +160,13 @@ h2 {
   font-family: "Stint Ultra Expanded", cursive;
 }
 
+#award {
+  position: absolute;
+  position: fixed;
+  top: 30px;
+  left: 50px;
+}
+
 .day {
   color: #783f27;
   font-family: verdana, sans-serif;
