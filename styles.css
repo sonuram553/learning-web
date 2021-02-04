@@ -25,6 +25,9 @@ h2 {
 
 #menu {
   border: 3px solid #783f27;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 section {
@@ -33,6 +36,9 @@ section {
   padding: 20px;
   border: 1px dotted maroon;
   width: 240px;
+  flex: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -47,4 +53,9 @@ section {
   padding: 5px;
   width: 100%;
   text-align: center;
+  margin-top: auto;
+}
+
+.photo {
+  order: -1;
 }
