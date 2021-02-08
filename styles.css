@@ -1,0 +1,104 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Georgia, serif;
+  font-size: 100%;
+  background-color: white;
+  margin: 0;
+}
+
+/* GRID STYLES START HERE */
+#layout {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* VISUAL STYLES START HERE */
+/* link styles */
+a:link,
+a:visited {
+  color: #dc6903;
+}
+
+a:focus,
+a:hover,
+a:active {
+  color: #f9ab33;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  padding-bottom: 0.2em;
+}
+
+/* nav styles */
+nav,
+footer {
+  font-family: verdana, sans-serif;
+  background-color: #783f27;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+  color: #f9ab33;
+}
+
+nav ul li a:focus,
+nav ul li a:hover,
+nav ul li a:active {
+  color: #fff;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+nav ul li a {
+  display: block;
+  border: 1px solid;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+}
+
+/* main styles */
+main {
+  font-family: "Stint Ultra Expanded", Georgia, serif;
+  background-color: white;
+  line-height: 1.8em;
+  color: #555;
+  padding: 1em;
+  border: double 4px #eaddc4;
+  border-radius: 25px;
+}
+
+/* misc styles */
+figure {
+  margin: 0;
+  padding: 0;
+  /* clears browser styles for figures */
+}
+
+footer {
+  color: #eaddc4;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 0.5em;
+}
