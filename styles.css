@@ -17,6 +17,42 @@ body {
 #layout {
   margin-left: 5%;
   margin-right: 5%;
+
+  display: grid;
+  grid-template-rows: 3em 20px [main-start] 150px auto 5em [main-end];
+  grid-template-columns: [main-start] 1fr [main-end] repeat(3, 20px 150px);
+}
+
+nav {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+main {
+  grid-row: main-start / main-end;
+  grid-column: main-start / main-end;
+
+  grid-area: main;
+}
+
+#figA {
+  grid-area: 3 / 3 / 4 / 4;
+}
+
+#figB {
+  grid-area: 3 / 5 / 4 / 6;
+}
+
+#figC {
+  grid-row: 3 / 4;
+  grid-column: span 1 / -1;
+}
+
+footer {
+  grid-row: span 1 / -1;
+  grid-column: 3 / -1;
 }
 
 /* VISUAL STYLES START HERE */
