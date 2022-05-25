@@ -1,5 +1,5 @@
 {
-  "name": "learning-web-baiscs",
+  "name": "learning-web",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sonuram553/learning-web-baiscs.git"
+    "url": "git+https://github.com/sonuram553/learning-web.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sonuram553/learning-web-baiscs/issues"
+    "url": "https://github.com/sonuram553/learning-web/issues"
   },
-  "homepage": "https://github.com/sonuram553/learning-web-baiscs#readme"
+  "homepage": "https://github.com/sonuram553/learning-web#readme"
 }
