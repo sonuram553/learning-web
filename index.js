@@ -1,5 +1,15 @@
-const update = require("immutability-helper");
+(() => {
+  console.log("this is the start");
 
-const arr = [4, 5, 6];
-const updatedArr = update(arr, { $unshift: [1, 2, 3] });
-console.log(updatedArr);
+  setTimeout(() => {
+    console.log("Callback 1: this is a msg from callback.");
+  }); // has a default time value of 0
+
+  console.log("this is just a message");
+
+  setTimeout(() => {
+    console.log("Callback 2: this is a msg from callback.");
+  }, 0);
+
+  console.log("this is the end");
+})();
