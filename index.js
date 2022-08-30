@@ -1,12 +1,5 @@
-const seconds = new Date().getTime() / 1000;
+const update = require("immutability-helper");
 
-setTimeout(() => {
-  console.log(`Ran after ${new Date().getTime() / 1000 - seconds} seconds`);
-}, 500);
-
-while (true) {
-  if (new Date().getTime() / 1000 - seconds >= 2) {
-    console.log("Good, looped for 2 seconds");
-    break;
-  }
-}
+const arr = [4, 5, 6];
+const updatedArr = update(arr, { $unshift: [1, 2, 3] });
+console.log(updatedArr);
