@@ -1,15 +1,22 @@
-(() => {
-  console.log("this is the start");
+function strict1(str) {
+  "use strict";
+  return eval(str);
+}
 
-  setTimeout(() => {
-    console.log("Callback 1: this is a msg from callback.");
-  }); // has a default time value of 0
+function strict2(f, str) {
+  "use strict";
+  return f(str);
+}
 
-  console.log("this is just a message");
+function nonStrict(str) {
+  return eval(str);
+}
 
-  setTimeout(() => {
-    console.log("Callback 2: this is a msg from callback.");
-  }, 0);
+strict1("'Strict mode code!'");
+strict1("'use strict'; 'Strict mode code!'");
 
-  console.log("this is the end");
-})();
+strict2(eval, "'Non-strict code.'");
+strict2(eval, "'use strict'; 'Strict mode code!'");
+
+nonStrict("'Non-strict code.'");
+nonStrict("'use strict'; 'Strict mode code!'");
