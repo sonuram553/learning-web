@@ -1,20 +1,16 @@
-class Point {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-  }
+const Animal = {
+  speak() {
+    console.log(`${this.name} makes a noise`);
+  },
+};
 
-  static displayName = "Point";
-  static distance(a, b) {
-    const dx = a.x - b.x;
-    const dy = a.y - b.y;
-
-    return Math.hypot(dx, dy);
+class Dog {
+  constructor(name) {
+    this.name = name;
   }
 }
 
-const p1 = new Point(5, 5);
-const p2 = new Point(10, 10);
+Object.setPrototypeOf(Dog.prototype, Animal);
 
-console.log(Point.displayName); // Point;
-console.log(Point.distance(p1, p2));
+const dog = new Dog("Bruce");
+dog.speak();
