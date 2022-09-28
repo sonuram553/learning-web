@@ -97,11 +97,16 @@
 
         const resizeObserver = new ResizeObserver((entries) => {
           for (const entry of entries) {
-            if (entry.borderBoxSize) {
+            if (entry.contentBoxSize) {
+              // Firefox implements `contentBoxSize` as a single content rect or object, rather than an array
+              const contentBoxSize = Array.isArray(entry.contentBoxSize)
+                ? entry.contentBoxSize[0]
+                : entry.contentBoxSize;
+
               h1Elem.style.fontSize =
-                Math.max(1.5, entry.borderBoxSize[0].inlineSize / 200) + "rem";
+                Math.max(1.5, contentBoxSize.inlineSize / 200) + "rem";
               pElem.style.fontSize =
-                Math.max(1, entry.borderBoxSize[0].inlineSize / 600) + "rem";
+                Math.max(1, contentBoxSize.inlineSize / 600) + "rem";
             } else {
               h1Elem.style.fontSize =
                 Math.max(1.5, entry.contentRect.width / 200) + "rem";
